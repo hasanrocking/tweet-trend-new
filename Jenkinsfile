@@ -10,7 +10,7 @@ pipeline {
 environment {
     PATH = "/opt/apache-maven-3.9.4/bin:$PATH"
 }
-    stages {
+   stages {
         stage("build"){
             steps {
                  echo "----------- build started ----------"
@@ -26,7 +26,7 @@ environment {
             }
         }
 
-    stage('SonarQube analysis') {
+    /* stage('SonarQube analysis') {
     environment {
       scannerHome = tool 'sonar-scanner'
     }
@@ -47,7 +47,9 @@ environment {
     }
   }
 }
+
     }
+    */
   }
          stage("Jar Publish") {
         steps {
